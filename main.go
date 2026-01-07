@@ -264,5 +264,5 @@ func main() {
 
 	serverAddr := ":" + port
 	log.Printf("Сервер запущен на порту %s", port)
-	log.Fatal(http.ListenAndServe(serverAddr, nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8000", nil))
 }

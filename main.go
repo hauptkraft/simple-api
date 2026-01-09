@@ -256,13 +256,6 @@ func main() {
 		fmt.Fprintf(w, `{"service": "Simple API", "version": "1.0.0"}`)
 	})
 
-	// Запуск сервера
-	port := os.Getenv("APP_PORT")
-	if port == "" {
-		port = "8080"
-	}
-
-	//serverAddr := ":" + port
-	log.Printf("Сервер запущен на порту %s", port)
+	log.Printf("Сервер запущен на порту %s", 8000)
 	log.Fatal(http.ListenAndServe("0.0.0.0:8000", nil))
 }

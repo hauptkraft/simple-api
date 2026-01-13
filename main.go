@@ -97,7 +97,7 @@ type Product struct {
 	Timestamp   time.Time `json:"timestamp" gorm:"type:timestamptz;index"`
 	Unit        string    `json:"unit" gorm:"type:varchar(50)"`
 	URL         string    `json:"url" gorm:"type:text;uniqueIndex"`
-	Weight      *string   `json:"weight,omitempty" gorm:"type:varchar(50)"`
+	Weight      *float64  `json:"weight,omitempty" gorm:"type:decimal(10,4)"`
 	CreatedAt   time.Time `json:"createdAt" gorm:"autoCreateTime"`
 	UpdatedAt   time.Time `json:"updatedAt" gorm:"autoUpdateTime"`
 	PageDataID  *string   `json:"-" gorm:"type:uuid;index"`

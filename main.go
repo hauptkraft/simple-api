@@ -248,7 +248,6 @@ func (app *Application) savePageDataHandler(w http.ResponseWriter, r *http.Reque
 
 	// Декодируем тело запроса
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		fmt.PrintLn(err)
 		app.respondWithError(w, http.StatusBadRequest, "Invalid JSON format")
 		return
 	}
